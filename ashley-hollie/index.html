@@ -19,12 +19,12 @@
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
     <script id="article-template" type="text/x-handlebars-template">
-      <article class="template" data-category="{{category}}">
+      <article class="template" data-category="{{category}}" data-author="{{author}}">
         <header>
           <h1>{{title}}</h1>
-          <div>
-            By <address><a href="{{authorURL}}">{{author}}</a></address>
-            published <time datetime="2000-01-01">{{publishedOn}}</time>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            <p>{{publishStatus}}</p>
           </div>
         </header>
         <section class="article-body">{{{body}}}</section>
@@ -91,6 +91,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
-    <script src="scripts/articleView.js"></script>
+    <!-- <script src="scripts/articleView.js"></script> -->
   </body>
 </html>

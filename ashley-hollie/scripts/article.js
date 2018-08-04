@@ -13,8 +13,9 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // TODONE: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
-  var source = $('#article-template').html();
-  var template = Handlebars.compile(source);
+  let source = $('#article-template').html();
+  let template = Handlebars.compile(source);
+  $('article').removeClass('template');
 
   // REVIEWED: If your template will use properties that aren't on the object yet, add them.
   // Since your template can't hold any JS logic, we need to execute the logic here.
@@ -22,7 +23,7 @@ Article.prototype.toHtml = function() {
   // For example, you might want to display how old a post is, or say "(draft)" if it has no publication date:
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
 
-  this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
+  this.publishStatus = this.publishedOn ? `Published ${this.daysAgo} days ago` : '(draft)';
 
   // REVIEWED: The ternary operator above accomplishes this same logic.
   // if(this.publishedOn) {
@@ -32,8 +33,9 @@ Article.prototype.toHtml = function() {
   // }
 
   // TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
-  var context = {title: this.title, category: this.category, author: this.author, authorURL: this.authorURL, publishedOn: this.daysAgo, publishedStatus: this.publishStatus, body: this.body}
-  var html = template(context);
+  // let context = {title: this.title, category: this.category, author: this.author, authorURL: this.authorURL, publishedStatus: this.publishStatus, body: this.body};
+  // let html = template(context);
+  return template(this);
 };
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
@@ -47,5 +49,6 @@ rawData.forEach(articleObject => {
 });
 
 articles.forEach(article => {
+  console.log(article);
   $('#articles').append(article.toHtml());
 });
