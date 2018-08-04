@@ -1,5 +1,4 @@
 'use strict';
-// rawData;
 let rawData = [
   {
     title:       'Bob Ross Ipsum',
