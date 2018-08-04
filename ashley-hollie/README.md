@@ -1,6 +1,6 @@
 # Templating with Handlbars
 
-**Author**: Ashley Breunich 
+**Author**: Ashley Breunich + Hollie Thomas
 **Version**: 1.0.0
 
 ## Overview
