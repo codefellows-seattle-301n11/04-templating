@@ -12,25 +12,26 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <!--
-      TODO: Add a script tag to hold the Handlebars template.
+      TODONE: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
         - Insert placeholder keys.
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
     <script id="article-template" type="text/x-handlebars-template">
-      <!-- <article class="template" data-category="cat">
+      <article class="template" data-category="{{category}}">
         <header>
-          <h1>Title</h1>
+          <h1>{{title}}</h1>
           <div>
-            By <address><a href="">Author Name</a></address>
-            published <time datetime="2000-01-01">Publish Time</time>
+            By <address><a href="{{authorURL}}">{{author}}</a></address>
+            published <time datetime="2000-01-01">{{publishedOn}}</time>
           </div>
         </header>
-        <section class="article-body"></section>
+        <section class="article-body">{{{body}}}</section>
         <a href="#" class="read-on">Read on &rarr;</a>
-      </article> -->
+      </article>
     </script>
+
   </head>
   <body>
     <header class="clearfix">
