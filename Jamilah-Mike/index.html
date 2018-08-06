@@ -20,7 +20,15 @@
     -->
     <script id="article-template" type="text/x-handlebars-template">
     <article class="article" data-category="{{category}}" data-author="{{author}}">
-
+      <h1>Title: {{title}}</h1>
+      <div>
+        By <address><a/ href="{{authorUrl}}">{{author}}</a></address>
+        published <time datetime="2000-01-01">{{publishedOn}}</time>
+      </div>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+    
   </head>
   <body>
     <header class="clearfix">
