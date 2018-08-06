@@ -32,7 +32,7 @@ Article.prototype.toHtml = function() {
   //   this.publishStatus = '(draft)';
   // }
 
-  // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
+  // TODONE: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
   return renderTemplate(this);
 };
 
