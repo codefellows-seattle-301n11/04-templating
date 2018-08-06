@@ -7,9 +7,11 @@
 Learning to use Handlebars for templating (in this lab) and how to use arrow functions.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Have an understanding for Handlebars and arrow functions. Follow TODOs and Comment Sections.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Javascript, jQuery, Handlebars.js, HTML5
 
 ## Credits and Collaborations
+Brandon Morelli @ Codeburst - JavaScript: Arrow Functions for Beginners
+https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc
