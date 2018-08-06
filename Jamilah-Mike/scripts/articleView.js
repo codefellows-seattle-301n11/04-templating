@@ -7,7 +7,7 @@ let articleView = {};
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // PUT YOUR RESPONSE HERE
 
-articleView.populateFilters = function() {
+articleView.populateFilters = () => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
