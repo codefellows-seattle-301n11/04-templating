@@ -16,7 +16,7 @@ Article.prototype.toHtml = function() {
   let $template = $('#article-template').html();
   let renderTemplate = Handlebars.compile($template);
 
-  // REVIEW: If your template will use properties that aren't on the object yet, add them.
+  // REVIEWED: If your template will use properties that aren't on the object yet, add them.
   // Since your template can't hold any JS logic, we need to execute the logic here.
   // The result is added to the object as a new property, which can then be referenced by key in the template.
   // For example, you might want to display how old a post is, or say "(draft)" if it has no publication date:
@@ -25,7 +25,7 @@ Article.prototype.toHtml = function() {
 
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
-  // REVIEW: The ternary operator above accomplishes this same logic.
+  // REVIEWED: The ternary operator above accomplishes this same logic.
   // if(this.publishedOn) {
   //   this.publishStatus = `published ${this.daysAgo} days ago`;
   // } else {
