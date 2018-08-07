@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" 
      href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
-
+     
+     <script id="article-template" type="text/x-handlebars-template">
     <!--
       COMPLETED: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
@@ -19,16 +20,15 @@
         - Insert placeholder keys.
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
-  <script id="article-template" type="text/x-handlebars-template">
-    <article class="template" data-category="cat">
+    <article class="template" data-category="{{category}}" data-author="{{author}}">
       <header>
         <h1>{{title}}</h1>
         <div>
-          By {{{<address><a href={{authorUrl}}>{{author}}</a></address>}}}
-          published <time datetime="2000-01-01">Publish Time</time>
+          By <address><a href={{authorUrl}}>{{author}}</a></address>
+          published <time datetime="2000-01-01">{{publishStatus}}</time>
         </div>
       </header>
-      <section class="article-body"></section>
+      <section class="article-body">{{{body}}}</section>
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
@@ -89,9 +89,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- COMPLETED: Include Handlebars.JS from a CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   </body>
 </html>
